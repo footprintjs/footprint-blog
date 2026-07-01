@@ -5,8 +5,6 @@
    Slide figures/deck stay a dark medium (light re-skin via the .deck-scope
    override below — a theme decision the consumer owns).
    ============================================================================ */
-@import '../storydeck/storydeck.css';
-
 :root {
   /* light (default token values) */
   --bg: #fbfaf8;

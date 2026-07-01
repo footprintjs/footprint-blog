@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { assemblePost } from '../storydeck/content/loadPost';
-import { scopeDeckCss } from '../storydeck/scopeDeckCss';
+import { assemblePost, scopeDeckCss } from 'storydeck';
 import { BASE } from '../site.config';
 
 // The consumer's content registry: discovers every post folder under content/posts/** and assembles

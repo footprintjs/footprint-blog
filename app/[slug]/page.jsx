@@ -1,5 +1,5 @@
 import { posts, getPost } from '../../content/registry';
-import { PostView } from '../../storydeck';
+import { PostView } from 'storydeck';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

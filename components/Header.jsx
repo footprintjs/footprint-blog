@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ThemeToggle } from '../storydeck';
+import { ThemeToggle } from 'storydeck';
 import { BASE } from '../site.config';
 
 export default function Header() {

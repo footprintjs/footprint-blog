@@ -1,5 +1,6 @@
+import 'storydeck/storydeck.css';
 import './globals.css';
-import { StoryDeckProvider } from '../storydeck';
+import { StoryDeckProvider } from 'storydeck';
 import { BASE, SITE } from '../site.config';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
