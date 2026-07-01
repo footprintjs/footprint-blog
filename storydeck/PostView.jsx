@@ -40,7 +40,7 @@ export default function PostView({ post }) {
 
       {view === 'read'
         ? <BlogView post={post} />
-        : <SlideDeck sections={post.sections} />}
+        : <SlideDeck steps={post.deckSteps} />}
     </main>
   );
 }

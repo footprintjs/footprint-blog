@@ -1,21 +1,11 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useTheme } from './useTheme';
 
+// Default toggle built on the headless useTheme hook. Consumers can use this, or build their own
+// control with useTheme() — storydeck only flips the html class; the consumer's tokens define
+// what light/dark look like.
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState('dark');
-
-  useEffect(() => {
-    setTheme(document.documentElement.classList.contains('light') ? 'light' : 'dark');
-  }, []);
-
-  function toggle() {
-    const next = theme === 'dark' ? 'light' : 'dark';
-    const el = document.documentElement;
-    el.classList.remove('light', 'dark');
-    el.classList.add(next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    setTheme(next);
-  }
+  const { theme, toggle } = useTheme();
 
   return (
     <button className="theme-toggle" onClick={toggle} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>

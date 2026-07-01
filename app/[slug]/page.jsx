@@ -1,5 +1,5 @@
-import { posts, getPost } from '../../../content/flowchart';
-import { PostView } from '../../../storydeck';
+import { posts, getPost } from '../../content/registry';
+import { PostView } from '../../storydeck';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       url,
-      images: ['/assets/footprintjs-logo.png'],
+      images: ['/blog/assets/footprintjs-logo.png'],
     },
     twitter: { card: 'summary_large_image', title: post.title, description: post.description },
   };
@@ -44,6 +44,8 @@ export default async function PostPage({ params }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {/* per-post deck styles (tokens + keyframes), scoped to .deck-scope — used by the figures + deck */}
+      <style dangerouslySetInnerHTML={{ __html: post.deckCssScoped }} />
       <PostView post={post} />
     </>
   );

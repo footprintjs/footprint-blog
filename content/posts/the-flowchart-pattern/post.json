@@ -1,0 +1,21 @@
+{
+  "slug": "the-flowchart-pattern",
+  "title": "The Flowchart Pattern",
+  "description": "How a whiteboard sketch becomes software that explains itself — a primer on the pattern behind footprintjs.",
+  "date": "2026-06-30",
+  "author": "Sanjay Krishna Anbalagan",
+  "tags": ["primer", "flowchart-pattern"],
+  "sections": [
+    { "key": "whiteboard",       "label": "The Whiteboard",     "heading": "Every system begins as a drawing",                 "slides": ["The Whiteboard"] },
+    { "key": "everyone-reads-it","label": "Everyone Reads It",  "heading": "A PM, an engineer, and a new hire all understand it","slides": ["Everyone Reads It"] },
+    { "key": "the-drift",        "label": "The Drift",          "heading": "But the code doesn’t look like the drawing",        "slides": ["The Drift"] },
+    { "key": "the-cost",         "label": "The Cost",           "heading": "“Why did it do that?”",                             "slides": ["The Cost"] },
+    { "key": "the-flip",         "label": "The Flip",           "heading": "What if the code were the flowchart?",              "slides": ["The Flip"] },
+    { "key": "same-shape",       "label": "Same Shape",         "heading": "The thing that runs is the thing you read",         "slides": ["Same Shape"] },
+    { "key": "records-itself",   "label": "It Records Itself",  "heading": "Every run records itself",                          "slides": ["It Records Itself"] },
+    { "key": "backtrack",        "label": "Backtrack The Why",  "heading": "Walk back to the exact cause",                      "slides": ["Backtrack The Why"] },
+    { "key": "many-lenses",      "label": "Many Lenses",        "heading": "Everyone picks their lens",                         "slides": ["Many Lenses"] },
+    { "key": "scales-to-agents", "label": "Scales To Agents",   "heading": "The same pattern wraps an AI agent",                "slides": ["Scales To Agents"] },
+    { "key": "ecosystem",        "label": "The Ecosystem",      "heading": "Built on the pattern",                              "slides": ["The Ecosystem"] }
+  ]
+}
