@@ -1,24 +1,33 @@
 'use client';
 import { useEffect, useState } from 'react';
 import BlogView from './BlogView';
+import ScrollyView from './ScrollyView';
 import SlideDeck from './SlideDeck';
 
-// The dual-view controller. Defaults to 'read' so the server-rendered HTML is the article
-// (the SEO surface); 'slides' is a client-only lens over the SAME sections. Deep-linkable
-// via ?view=slides, and the toggle keeps the URL in sync without a reload.
+// The dual/tri-view controller and the library/consumer seam: it takes the normalized `post`,
+// filters out deck bookends once, and hands each lens exactly the minimal data it needs
+// (sections → Read/Scrolly, deckSteps → Watch). Defaults to 'read' so the SSR HTML is the article
+// (SEO surface). Deep-linkable via ?view=slides|scrolly; the toggle keeps the URL in sync.
+const LENSES = [
+  { id: 'read', label: 'Read it' },
+  { id: 'scrolly', label: 'Scroll it' },
+  { id: 'slides', label: 'Watch it' },
+];
+
 export default function PostView({ post }) {
   const [view, setView] = useState('read');
+  const content = post.sections.filter((s) => s.key !== 'Title' && s.key !== 'Close');
 
   useEffect(() => {
     const v = new URLSearchParams(window.location.search).get('view');
-    if (v === 'slides') setView('slides');
+    if (v === 'slides' || v === 'scrolly') setView(v);
   }, []);
 
   function choose(next) {
     setView(next);
     const u = new URL(window.location.href);
-    if (next === 'slides') u.searchParams.set('view', 'slides');
-    else u.searchParams.delete('view');
+    if (next === 'read') u.searchParams.delete('view');
+    else u.searchParams.set('view', next);
     window.history.replaceState(null, '', u);
   }
 
@@ -34,13 +43,14 @@ export default function PostView({ post }) {
       </header>
 
       <div className="view-toggle" role="group" aria-label="Choose a view">
-        <button aria-pressed={view === 'read'} onClick={() => choose('read')}>Read it</button>
-        <button aria-pressed={view === 'slides'} onClick={() => choose('slides')}>Watch it</button>
+        {LENSES.map((l) => (
+          <button key={l.id} aria-pressed={view === l.id} onClick={() => choose(l.id)}>{l.label}</button>
+        ))}
       </div>
 
-      {view === 'read'
-        ? <BlogView post={post} />
-        : <SlideDeck steps={post.deckSteps} />}
+      {view === 'read' ? <BlogView sections={content} /> : null}
+      {view === 'scrolly' ? <ScrollyView sections={content} /> : null}
+      {view === 'slides' ? <SlideDeck steps={post.deckSteps} /> : null}
     </main>
   );
 }

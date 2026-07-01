@@ -4,12 +4,11 @@ import SlideFigure from './SlideFigure';
 import { finalStep } from './sections';
 import { slugify } from './slug';
 
-// Blog lens: each content section = ONE figure (the section's final built step) + authored prose.
-// A grouped section (several progressive slides) collapses to its last step here — no slide dump.
-// Each section has a sticky header with an anchor link so a reader can deep-link / share it.
-// 'Title' and 'Close' are deck bookends — Title is the article header (PostView), Close is the CTA.
-export default function BlogView({ post }) {
-  const content = post.sections.filter((s) => s.key !== 'Title' && s.key !== 'Close');
+// Read lens: each section = ONE figure (its final built step) + authored prose, with a sticky,
+// shareable header (anchor deep-link). A grouped section collapses to its last step here.
+// API (library-clean): takes `sections` = [{ key, label, heading, steps:[html…], body }],
+// already filtered by the consumer (PostView). No consumer-specific chrome lives here.
+export default function BlogView({ sections }) {
   const [copied, setCopied] = useState('');
 
   function copyLink(e, id) {
@@ -23,7 +22,7 @@ export default function BlogView({ post }) {
 
   return (
     <article>
-      {content.map((s) => {
+      {sections.map((s) => {
         const id = slugify(s.key);
         return (
           <section id={id} className="post-section" key={id}>
@@ -48,11 +47,6 @@ export default function BlogView({ post }) {
           </section>
         );
       })}
-
-      <div className="post-cta">
-        <p>That's the pattern. It powers a whole stack.</p>
-        <p><a href="https://footprintjs.github.io/">Explore the footprintjs ecosystem →</a></p>
-      </div>
     </article>
   );
 }
