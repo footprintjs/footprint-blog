@@ -1,0 +1,21 @@
+{
+  "slug": "the-trail-pattern",
+  "title": "The Trail Pattern",
+  "description": "When no one drew a plan, the record becomes the map — a primer on the trail pattern behind vizfootprint.",
+  "date": "2026-07-16",
+  "author": "Sanjay Krishna Anbalagan",
+  "tags": ["primer", "trail-pattern", "vizfootprint"],
+  "sections": [
+    { "key": "recap",        "label": "Last Time",        "heading": "Last time, the drawing ran",                          "slides": ["Last Time"] },
+    { "key": "no-plan",      "label": "No Plan",          "heading": "An analyst opens a dashboard. No flowchart anywhere.","slides": ["No Plan"] },
+    { "key": "footprints",   "label": "Footprints Anyway","heading": "Every gesture still leaves a footprint",              "slides": ["Footprints Anyway"] },
+    { "key": "the-trail",    "label": "The Trail",        "heading": "The record is the map, drawn by walking",             "slides": ["The Trail"] },
+    { "key": "the-fork",     "label": "The Fork",         "heading": "The trail doesn’t erase — it branches",               "slides": ["The Fork"] },
+    { "key": "time-travel",  "label": "Time Travel",      "heading": "Stand at any footprint; the dashboard rebuilds it",   "slides": ["Time Travel"] },
+    { "key": "two-walkers",  "label": "Two Walkers",      "heading": "A human and an agent, on the same trail",             "slides": ["Two Walkers"] },
+    { "key": "honesty",      "label": "Honest Marks",     "heading": "What you looked at vs. what you claimed",             "slides": ["Honest Marks"] },
+    { "key": "pattern-pair", "label": "The Pattern Pair", "heading": "Plans leave flowcharts; explorations leave trails",   "slides": ["The Pattern Pair"] },
+    { "key": "its-real",     "label": "It's Real",        "heading": "vizfootprint is the trail pattern, running",          "slides": ["It's Real"] },
+    { "key": "close",        "label": "The Map",          "heading": "The map you draw by walking",                         "slides": ["Close"] }
+  ]
+}
