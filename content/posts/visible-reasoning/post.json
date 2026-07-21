@@ -1,0 +1,21 @@
+{
+  "slug": "visible-reasoning",
+  "title": "Visible Reasoning",
+  "description": "When an answer flips in two minutes, only a record that links reasoning to data can tell you why — a primer on visible reasoning and the influence score behind agentfootprint.",
+  "date": "2026-07-21",
+  "author": "Sanjay Krishna Anbalagan",
+  "tags": ["primer", "visible-reasoning", "transparency"],
+  "sections": [
+    { "key": "three-eras",      "label": "Three Eras",          "heading": "Every era asked trust a new question",          "slides": ["Era One", "Era Two", "Era Three"] },
+    { "key": "reasoning",       "label": "Response + Reasoning","heading": "The product is now the answer and the thinking","slides": ["Response + Reasoning"] },
+    { "key": "career-question", "label": "The Question",        "heading": "A student asks; the backend goes to work",      "slides": ["The Question", "The Fetches"] },
+    { "key": "the-flip",        "label": "The Flip",            "heading": "Two minutes later, the career flips",           "slides": ["Two Minutes Later", "The Flip"] },
+    { "key": "what-went-wrong", "label": "What Went Wrong",     "heading": "The second answer never saw the school data",   "slides": ["What Went Wrong"] },
+    { "key": "connected-logs",  "label": "Connected Logs",      "heading": "One record, threaded through every agent",      "slides": ["Many Agents", "Connected Logs"] },
+    { "key": "show-evidence",   "label": "Show The Evidence",   "heading": "Trust forms at presentation",                   "slides": ["Show The Evidence"] },
+    { "key": "influence-score", "label": "The Influence Score", "heading": "Build the score one term at a time",            "slides": ["Sp", "Sgp", "Relevancy", "Persistence", "Depth", "The Score"] },
+    { "key": "ranked",          "label": "Ranked Evidence",     "heading": "Sort it, and show the top with the answer",     "slides": ["Sorted"] },
+    { "key": "its-real",        "label": "It's Real",           "heading": "One reference implementation, not the way",     "slides": ["It's Real"] },
+    { "key": "close",           "label": "The Third Pattern",   "heading": "Why we record anything at all",                 "slides": ["Close"] }
+  ]
+}
