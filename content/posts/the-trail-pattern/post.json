@@ -14,10 +14,10 @@
     { "key": "the-fold",      "label": "The Fold",          "heading": "State is never stored — it is folded",                  "slides": ["The Fold"] },
     { "key": "the-fork",      "label": "The Fork",          "heading": "The fork with no decider",                              "slides": ["The Fork"] },
     { "key": "lanes",         "label": "Named Lanes",       "heading": "Branches get names; the dashboard rebuilds anywhere",   "slides": ["Time Travel"] },
-    { "key": "inversion",     "label": "The Inversion",     "heading": "The click updates history — the filter is watching",    "slides": ["The Inversion"] },
+    { "key": "inversion",     "label": "The Inversion",     "heading": "The click updates history — the filter is watching",    "slides": ["The Inversion", "The Flip"] },
     { "key": "two-walkers",   "label": "Two Walkers",       "heading": "A human and an agent, on the same trail",               "slides": ["Two Walkers"] },
     { "key": "honesty",       "label": "Honest Marks",      "heading": "What you looked at vs. what you claimed",               "slides": ["Honest Marks"] },
-    { "key": "consumer",      "label": "The Car",           "heading": "And you write none of this",                            "slides": ["Consumer Code"] },
+    { "key": "consumer",      "label": "The Car",           "heading": "And you write none of this",                            "slides": ["Consumer Code", "Under The Hood"] },
     { "key": "pattern-pair",  "label": "The Pattern Pair",  "heading": "Plans leave flowcharts; explorations leave trails",     "slides": ["The Pattern Pair"] },
     { "key": "its-real",      "label": "It's Real",         "heading": "vizfootprint is the trail pattern, running",            "slides": ["It's Real"] },
     { "key": "close",         "label": "The Map",           "heading": "The map you draw by walking",                           "slides": ["Close"] }
