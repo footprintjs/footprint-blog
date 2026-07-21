@@ -17,11 +17,11 @@ function loadOne(slug) {
   const bodyPath = path.join(dir, 'body.md');
   const bodyMd = fs.existsSync(bodyPath) ? fs.readFileSync(bodyPath, 'utf8') : '';
 
-  // deploy-time asset prefixing lives in the consumer (not the engine): the slide HTML references
-  // the logo at /assets/… → prefix with the base path.
+  // deploy-time asset prefixing lives in the consumer (not the engine): slide HTML references
+  // images at /assets/… (the logo, per-post media folders) → prefix with the base path.
   const deckSlides = deck.sections.map((s) => ({
     label: s.label,
-    html: s.html.replaceAll('/assets/footprintjs-logo.png', `${BASE}/assets/footprintjs-logo.png`),
+    html: s.html.replaceAll('src="/assets/', `src="${BASE}/assets/`),
   }));
 
   const post = assemblePost({ meta, sections, bodyMd, deckSlides });
