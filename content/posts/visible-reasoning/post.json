@@ -12,7 +12,7 @@
     { "key": "the-flip",        "label": "The Flip",            "heading": "Two minutes later, the career flips",           "slides": ["Two Minutes Later", "The Flip"] },
     { "key": "what-went-wrong", "label": "What Went Wrong",     "heading": "The second answer never saw the school data",   "slides": ["What Went Wrong"] },
     { "key": "connected-logs",  "label": "Connected Logs",      "heading": "One record, threaded through every agent",      "slides": ["Many Agents", "Connected Logs"] },
-    { "key": "show-evidence",   "label": "Show The Evidence",   "heading": "Trust forms at presentation",                   "slides": ["Show The Evidence"] },
+    { "key": "show-evidence",   "label": "Show The Evidence",   "heading": "Trust forms at presentation",                   "slides": ["The Answer", "Evidence Media", "Evidence School", "Show The Evidence"] },
     { "key": "influence-score", "label": "The Influence Score", "heading": "Build the score one term at a time",            "slides": ["Sp", "Sgp", "Relevancy", "Persistence", "Depth", "The Score"] },
     { "key": "ranked",          "label": "Ranked Evidence",     "heading": "Sort it, and show the top with the answer",     "slides": ["Sorted"] },
     { "key": "its-real",        "label": "It's Real",           "heading": "One reference implementation, not the way",     "slides": ["It's Real"] },
